@@ -1,10 +1,11 @@
 <?php
-require_once __DIR__ .'/../admin/adminProcess.php';
+$pageTitle="Page Admin";
 require_once __DIR__ . '/../layout/header.php';
+
 
 ?>
 
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data" action="adminProcess.php">
   <div class="mb-6">
     <h1 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h1>
 
@@ -18,7 +19,7 @@ require_once __DIR__ . '/../layout/header.php';
 </div>
   
 <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="image">Upload file</label>
-<input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="image" name="image" type="file">
+<input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="image" name="images" type="file">
 <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="image_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
 
 
@@ -26,8 +27,7 @@ require_once __DIR__ . '/../layout/header.php';
 </form>
 
 <?php
-var_dump($_FILES);
-var_dump($_POST);
+
 ?>
 //
 <!-- form>

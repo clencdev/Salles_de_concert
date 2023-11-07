@@ -57,7 +57,7 @@ require_once 'layout/header.php';
 </div>
 <div>
 
-
+<a href="adminInterface.php">admin</a>
 </div>
 
 </main>
