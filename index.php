@@ -67,11 +67,20 @@ try {
         </span>
     </button>
 </div>
+
+<h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h2>
+
+<div class="row">
+
 <?php
-foreach ($actus as $actus) {
+//Changement de methode de boucle, on utilise la boucle for, pour afficher 6 elemetns sur la page index
+    for ($i = 0; $i < 6; $i++)
+    {
+        $actu = $actus[$i];
     require 'templates/actu_template.php';
-}
+    }
 ?>
+</div>
 </main>
 
 

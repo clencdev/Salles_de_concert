@@ -1,0 +1,47 @@
+.box {
+    display: flex;
+  }
+
+.text-blog {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.column {
+    flex: 0 0 33.333333%; /* Chaque colonne prend un tiers de la largeur du conteneur */
+    max-width: 33.333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.article {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px; /* Espacement entre les lignes */
+    /* Style de votre article, ajustez comme nécessaire */
+}
+
+.article img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.article .p-5 {
+    padding: 20px;
+}
+
+/* Ajoutez d'autres styles ici selon vos besoins */
