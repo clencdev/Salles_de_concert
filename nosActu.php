@@ -2,13 +2,14 @@
 $pageTitle = "Nos actus";
 require_once "layout/header.php";
 require_once "classes/ConnectionDb.php";
+
 try {
 
 
     $pdo = ConnectionDb::getConnex();
 
 
-    $stmt = $pdo->query("SELECT * FROM actu");
+    $stmt = $pdo->query("SELECT * FROM actu ");
     $actus= $stmt->fetchAll();
 }catch(PDOException $e) {
     echo 'failed' . $e->getMessage();

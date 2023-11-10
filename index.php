@@ -13,7 +13,11 @@ try {
     $actus= $stmt->fetchAll();
 }catch(PDOException $e) {
     echo 'failed' . $e->getMessage();
+
+    $actu = $actus;
+
 }
+var_dump($actus);
 ?>
 <main>
     
@@ -22,23 +26,23 @@ try {
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="photo/photoactu/<?php echo $actu['images']['suicideboys-2022-cr-Max-Beck-billboard-1548.webp']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="photo/photoactu/<?php echo $actu['images']['GettyImages-85217968_qklcs4.webp']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="photo/photoactu/<?php echo $actu['images']['push-snoop-dogg-biopic-numero-magazine.jpg']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 4 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="photo/photoactu/<?php echo $actu['images']['nirvana.webp']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 5 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="photo/photoactu/<?php echo $actu['images']['unnamed.jpg']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
     </div>
     <!-- Slider indicators -->
@@ -68,7 +72,9 @@ try {
     </button>
 </div>
 
-<h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h2>
+<a href="nosActu.php" class="text-center">
+    <h2 class="text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h2>
+</a>
 
 <div class="row">
 
