@@ -15,7 +15,7 @@ require_once __DIR__ . '/../layout/header.php';
             <h2 class="text-xl font-bold mb-20"><?php echo $ev['event_name'] ?></h2>
             
             <p class="text-gray-600 indent-8"><?php echo nl2br($ev['descriptions']) ?></p>
-            //fonction qui permet de mettr en forme mon text_content lors de l'affichage pour l'utilisateur
+        <!-- fonction qui permet de mettr en forme mon text_content lors de l'affichage pour l'utilisateur -->
         </div>
     </div>
     
