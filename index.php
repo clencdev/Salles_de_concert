@@ -11,39 +11,31 @@ try {
 
     $stmt = $pdo->query("SELECT * FROM actu");
     $actus= $stmt->fetchAll();
+
+    $stmtEvents = $pdo->query("SELECT photo, event_name FROM events");
+    $eventsData = $stmtEvents->fetchAll();
+
 }catch(PDOException $e) {
     echo 'failed' . $e->getMessage();
-
-    $actu = $actus;
-
 }
-var_dump($actus);
 ?>
 <main>
     
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-         <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="photo/photoactu/<?php echo $actu['images']['suicideboys-2022-cr-Max-Beck-billboard-1548.webp']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="photo/photoactu/<?php echo $actu['images']['GettyImages-85217968_qklcs4.webp']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="photo/photoactu/<?php echo $actu['images']['push-snoop-dogg-biopic-numero-magazine.jpg']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="photo/photoactu/<?php echo $actu['images']['nirvana.webp']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="photo/photoactu/<?php echo $actu['images']['unnamed.jpg']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
+        <?php foreach ($eventsData as $event) { ?>
+        <a href="event.php?event_name=<?php echo $event['event_name'];?>">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="photo/photoevent/<?php echo $event['photo']; ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute top-0 left-0 w-full text-white text-left py-2 px-4" style="background-color: rgba(0, 0, 0, 0.5); font-size: 40px;">
+                    <?php echo $event['event_name']; ?>
+                </div>
+            </div>
+        </a>
+
+    <?php } ?>
+        
     </div>
     <!-- Slider indicators -->
     <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
@@ -52,6 +44,11 @@ var_dump($actus);
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 6" data-carousel-slide-to="5"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7" data-carousel-slide-to="6"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 8" data-carousel-slide-to="7"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 9" data-carousel-slide-to="8"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 10" data-carousel-slide-to="9"></button>
     </div>
     <!-- Slider controls -->
     <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -72,9 +69,7 @@ var_dump($actus);
     </button>
 </div>
 
-<a href="nosActu.php" class="text-center">
-    <h2 class="text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h2>
-</a>
+<h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h2>
 
 <div class="row">
 
