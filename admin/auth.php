@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../layout/header.php';
 
 ?>
-
+ 
 <form method="POST"  action="login.php" class="mb-10">
   <div class="mb-6">
     <h1 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h1>

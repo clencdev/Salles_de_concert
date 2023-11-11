@@ -10,6 +10,11 @@ if (!isset($_SESSION['username'])) {
 
 
 ?>
+<div style="position: fixed; top: 10px; right: 10px;">
+    <a href="logout.php" style="color: blue; text-decoration: none; font-size: 16px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Déconnexion</a>
+</div>
+
+<div id='calendar'></div>
 
 <form method="POST" enctype="multipart/form-data" action="adminProcess.php" class="mb-10">
   <div class="mb-6">
