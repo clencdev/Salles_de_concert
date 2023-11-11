@@ -3,7 +3,7 @@ $pageTitle = "Nos actus";
 require_once "layout/header.php";
 require_once "classes/ConnectionDb.php";
 
-try {
+try { 
 
 
     $pdo = ConnectionDb::getConnex();

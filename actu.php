@@ -9,7 +9,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     exit;  
 }
 
-
+ 
 ['id' => $id ] = $_GET;
 try {
 

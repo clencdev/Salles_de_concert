@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ ."/../classes/ConnectionDb.php";
-require_once __DIR__ ."/../classes/FunctionUse.php";
+
 
 session_start();
 
