@@ -82,6 +82,23 @@ try {
     }
 ?>
 </div>
+<div class="bodyAbout">
+    <div class="about-container">
+        <h1 class="heading">À propos de nous</h1>
+                
+        <p class="subheading pAbout">Bienvenue chez OK Lieu de Concert, votre destination incontournable pour la musique underground au cœur de Lyon. Nichés dans le dynamique 8ème arrondissement, au 50 rue Laennec, nous sommes fiers d'offrir deux salles uniques où la créativité et l'originalité de la scène musicale prennent vie.</p>
+        
+        <h2 class="h2About">Notre Philosophie</h2>
+        <p class="pAbout">Nous croyons en la puissance de la musique pour rassembler les gens et créer des expériences inoubliables. Chez OK Lieu de Concert, chaque performance est une chance de découvrir des sons avant-gardistes et de célébrer les talents émergents ainsi que les artistes établis qui façonnent le paysage musical alternatif.</p>
+        
+        <h2 class="h2About">Nos Espaces</h2>
+        <p class="pAbout">Nos deux salles sont conçues pour offrir une acoustique exceptionnelle, une ambiance intimiste et une expérience immersive. Que ce soit pour un concert électrisant ou une performance acoustique épurée, nos espaces sont modulables et s'adaptent à la vision de chaque artiste.</p>
+        
+        <h2 class="h2About">Notre Communauté</h2>
+        <p class="pAbout">Nous sommes plus qu'un lieu de concert : nous sommes un collectif de passionnés de musique, d'artistes, et de fans qui partagent un amour commun pour les rythmes non conventionnels. Chaque événement est une opportunité de tisser des liens, de partager des idées et de s'enrichir mutuellement au sein de notre communauté.</p>
+        
+    </div>
+</div>
 </main>
 
 
