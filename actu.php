@@ -1,16 +1,16 @@
 <?php
-$titre="Actualité";
+$pageTitle = "Actualité";
 require_once "layout/header.php";
 require_once "classes/ConnectionDb.php";
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     http_response_code(404);
     echo 'actu non trouvé';
-    exit;  
+    exit;
 }
 
- 
-['id' => $id ] = $_GET;
+
+['id' => $id] = $_GET;
 try {
 
 
@@ -19,8 +19,15 @@ try {
 
     $stmt = $pdo->prepare("SELECT * FROM actu WHERE actu_id = ?");
     $stmt->execute([$id]);
-    $actu= $stmt->fetch();
-}catch(PDOException $e) {
+    $actu = $stmt->fetch();
+
+    // Verifie si l'id existe
+    if (!$actu) {
+        http_response_code(404);
+        echo 'Aucune actu trouvée pour cet ID';
+        exit;
+    }
+} catch (PDOException $e) {
     echo 'failed' . $e->getMessage();
 }
 

@@ -1,10 +1,9 @@
 <?php
-$titre="Actualité";
+$pageTitle = "event";
 require_once "layout/header.php";
 require_once "classes/ConnectionDb.php";
 
-if (!isset($_GET["event_name"])) 
-{
+if (!isset($_GET["event_name"])) {
     http_response_code(404);
     echo "Evenement non trouvé";
     exit;
@@ -17,10 +16,16 @@ try {
     $stmt = $pdo->prepare("SELECT * FROM events WHERE event_name = ?");
     $stmt->execute([$eventName]);
     $ev = $stmt->fetch();
-    }catch(PDOException $e) {
+
+    if (!$ev) {
+        http_response_code(404);
+        echo 'Aucune event trouvée';
+        exit;
+    }
+} catch (PDOException $e) {
     echo "failed :" . $e->getMessage();
     exit;
-
 }
 
 require_once "templates/event_template.php";
+require_once "layout/footer.php";

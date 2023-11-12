@@ -34,7 +34,3 @@ try {
     header('Location: ' . $_SERVER['PHP_SELF']);
     exit;
 }
-?>
-
-
-
