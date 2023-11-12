@@ -15,9 +15,9 @@ try{
 
 ?>
 
-<body>
-    <main>
-    <h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Events</h2>
+
+    <main class="mt-20">
+    <h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100 mb-20">Prochaines events</h2>
         <div class="row">
             <?php 
             foreach($events as $ev) 
@@ -27,4 +27,3 @@ try{
             ?>
         </div>
     </main>
-</body>

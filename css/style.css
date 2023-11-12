@@ -159,3 +159,24 @@
 .logout-link:hover {
     text-decoration: underline;
 }
+
+footer {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

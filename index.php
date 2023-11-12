@@ -21,7 +21,7 @@ try {
 ?>
 <main>
     
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<div id="default-carousel" class="relative w-full mt-20" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
         <?php foreach ($eventsData as $event) { ?>
@@ -68,8 +68,8 @@ try {
         </span>
     </button>
 </div>
-
-<h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h2>
+<div class="actu mt-20">
+<h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100 mb-20">Les Actus</h2>
 
 <div class="row">
 
@@ -82,9 +82,10 @@ try {
     }
 ?>
 </div>
-<div class="bodyAbout">
+</div>
+<div class="bodyAbout mt-20">
     <div class="about-container">
-        <h1 class="heading">À propos de nous</h1>
+        <h1 class="heading mb-20">À propos de nous</h1>
                 
         <p class="subheading pAbout">Bienvenue chez OK Lieu de Concert, votre destination incontournable pour la musique underground au cœur de Lyon. Nichés dans le dynamique 8ème arrondissement, au 50 rue Laennec, nous sommes fiers d'offrir deux salles uniques où la créativité et l'originalité de la scène musicale prennent vie.</p>
         

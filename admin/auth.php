@@ -1,4 +1,5 @@
 <?php
+$pageTitle = "Authentification";
 require_once __DIR__ . '/../layout/header.php';
 
 ?>

@@ -16,9 +16,9 @@ try {
 }
 ?>
 
-<body>
-    <main>
-    <h2 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">Actu</h2>
+
+    <main class="mt-20">
+    <h1 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100 mb-20">Actu</h1>
         <div class="row">
             <?php 
             foreach($actus as $actu) 
@@ -28,4 +28,3 @@ try {
             ?>
         </div>
     </main>
-</body>
