@@ -11,7 +11,7 @@ try {
     $result = $pdo->query($stmt);
 
     $events = [];
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $result->fetch()) {
         $events[] = [
             'title' => $row['event_name'],
             'start' => date('Y-m-d', strtotime($row['date'])) 

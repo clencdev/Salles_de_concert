@@ -42,7 +42,7 @@ if (!isset($_SESSION['username'])) {
 <?php
 
 ?>
-
+<!-- Formulaire Events -->
 <form method="POST" enctype="multipart/form-data" action="adminProcessEvent.php" class="mb-10">
   <div class="mb-6">
     <h1 class=" text-center text-xl font-semibold text-blue-600/100 dark:text-blue-500/100">event</h1>
